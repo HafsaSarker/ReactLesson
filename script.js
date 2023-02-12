@@ -72,3 +72,61 @@ console.log(element)
     _store: {}
 }
  */
+
+//you cannot render two sibling elements together without wrapping them in a div
+ReactDOM.render(
+    <div>
+        <h2>Rendering multiple siblings without wrapper is not allowed</h2>
+        <p>Now we can render them this way</p>
+    </div>,
+    document.getElementById("multiRender")
+);
+
+//you can also put the item to be rendered in a var
+const itemToRender = (
+    <div>
+        <table>
+            <tr>
+                <td>Money</td>
+                <td>Person</td>
+            </tr>
+            <tr>
+                <td>$100,000</td>
+                <td>Jin</td>
+            </tr>
+        </table>
+    </div>
+);
+
+ReactDOM.render(
+    itemToRender,
+    document.getElementById("multiRender")
+);
+
+/* 
+Challenge: 
+
+Create a navbar in JSX:
+    - Use the semantic `nav` element as the parent wrapper
+    - Have an h1 element with the brand name of your "website"
+    - Insert an unordered list for the other nav elements
+        - Inside the `ul`, have three `li`s for "Pricing",
+        "About", and "Contact"
+    - Don't worry about styling yet - it'll just be plain-looking HTML for now
+*/
+
+const nav = (
+    <nav className="navbar">
+        <h1>Chefs Choice</h1>
+        <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+);
+
+ReactDOM.render(
+    nav,
+    document.getElementById("NAV")
+);
