@@ -14,9 +14,41 @@ ReactDOM.render(
 );
 
 
-//creating custom HTML elementrtags
-function bio(){
-    return {
-        
-    }
+//creating custom HTML element tag
+//MUST be capitalized first letter
+function Bio(){
+    return (
+        <div>
+            <h1>Did you know that...</h1>
+            <p>In 2028, people will start getting to work in drones.</p>
+        </div>
+    )
 }
+
+//render that element
+ReactDOM.render(
+    <div>
+        <Bio />
+    </div>,
+    document.getElementById("customeElem")
+);
+
+//react is declaritive
+//lets look at the imperitive way of writting js using vanilla js
+
+/* 
+Challenge - recreate the above line of code in vanilla JS by creating and
+appending an h1 to our div#root (without using innerHTML).
+
+- Create a new h1 element
+- Give it some textContent
+- Give it a class name of "header"
+- append it as a child of the div#root
+    
+*/
+
+const h1 = document.createElement("h1");
+h1.textContent = "An imperitive way to program";
+h1.className = "header";
+const root = document.getElementById("root");
+root.appendChild(h1);
