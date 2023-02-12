@@ -52,3 +52,23 @@ h1.textContent = "An imperitive way to program";
 h1.className = "header";
 const root = document.getElementById("root");
 root.appendChild(h1);
+
+//the above code can be written in a SINGLE LINE in react in a declarative way. Look:
+ReactDOM.render(
+    <h1 className="header">This is a declarative way to program</h1>,
+    document.getElementById("root")
+);
+
+//with jsx, react creates plain old js objects that describe the dom element we create:
+const element = <h1 className="header">This is JSX</h1>
+console.log(element)
+/*
+{
+    type: "h1", 
+    key: null, 
+    ref: null, 
+    props: {className: "header", children: "This is JSX"}, 
+    _owner: null, 
+    _store: {}
+}
+ */
