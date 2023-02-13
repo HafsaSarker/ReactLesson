@@ -119,6 +119,7 @@ const nav = (
     <nav className="navbar">
         <h1>Chefs Choice</h1>
         <ul>
+            <li>Home</li>
             <li>Pricing</li>
             <li>About</li>
             <li>Contact</li>
@@ -130,3 +131,5 @@ ReactDOM.render(
     nav,
     document.getElementById("NAV")
 );
+
+
