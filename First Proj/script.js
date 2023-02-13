@@ -133,3 +133,28 @@ ReactDOM.render(
 );
 
 
+//The real way to use react is to use dependencies  and then import react from react (older versions of react)
+
+//like this:
+/*
+import React from "react"
+import ReactDOM from "react-dom/client"
+
+const navbar = (
+    <nav>
+        <h1>Bob's Bistro</h1>
+        <ul>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+)
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(navbar)
+
+// ReactDOM.render(navbar, document.getElementById("root"))
+// ReactDOM.createRoot(document.getElementById("root")).render(navbar)
+*/
+
