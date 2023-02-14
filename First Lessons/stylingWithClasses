@@ -1,0 +1,59 @@
+/**
+Challenge: 
+
+- Add an `ul` inside the Header's `nav` and create
+  the following `li`s: "Pricing", "About", & "Contact"
+*/
+
+import React from 'react';
+import ReactDOM from 'react-dom/client'; //must use client to use react-dom
+function Header() {
+    return (
+        <header>
+            <nav>
+                img
+                <ul className='nav-tems'>
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+    )
+}
+
+function MainContent() {
+    return (
+        <>
+            <h1>Reasons I am excited to learn React</h1>
+            <ul>
+                <li>It is composable</li>
+                <li>Much easier to write than vanilla Js</li>
+                <li>A must skill for a frontend developer</li>
+            </ul>
+        </>
+    )
+}
+
+function Footer (){
+    return (
+        <footer>© 20xx NASA development. All rights reserved.</footer>
+    )
+}
+
+function CustomeElement() {
+    return(
+        <>
+            //render everything down here
+            <Header />
+            <MainContent />
+            <Footer />
+        </>
+    )
+}
+
+//render this 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<CustomeElement />);
+
+
