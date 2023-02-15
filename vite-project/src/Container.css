@@ -1,0 +1,9 @@
+.container {
+    padding: 30px 40px;
+    color: #e4e2e2;
+    height: 450px;
+}
+
+ul > li {
+    font-size: 22px;
+}
