@@ -13,3 +13,36 @@
 
             const root = ReactDOM.createRoot(document.getElementById("root"));
             root.render(<Page />);
+
+
+
+# Feb 14th recap
+
+    Seperating the components in different files:
+    1) The file must start with capital letter. like "Header.js"
+    2) importing react from react in each file
+    3) after writing the component, export it.
+        ex file Header.js:
+        #####
+            import React from "react"
+
+            export default function Header() {
+                return (
+                    <header>
+                        <nav className="nav">
+                            <img src="./react-logo.png" className="nav-logo" />
+                            <ul className="nav-items">
+                                <li>Pricing</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </nav>
+                    </header>
+                )
+            }
+        #####
+
+    4) then to import this header in the main file, we have to import it using "./Header". "./..." tells the prog that it is not a react component that we are exporting
+        ex in app.js:
+            import Header from "./Header"
+
