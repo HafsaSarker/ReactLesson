@@ -46,3 +46,12 @@
         ex in app.js:
             import Header from "./Header"
 
+
+## Using vite with npm (better than "create-react-app" which takes forever to create )
+    1. npm create vite@latest
+    2. answer the questions
+    3. cd projectName
+    4. npm install 
+    5. npm run dev
+
+    And done! you will see a localHost 

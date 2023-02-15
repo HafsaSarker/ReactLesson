@@ -17,7 +17,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <img src='' width="40px"/>
+                img
             </nav>
         </header>
     )
