@@ -55,3 +55,16 @@
     5. npm run dev
 
     And done! you will see a localHost 
+
+
+# Feb 15th 
+    How to put a logo in the background? 
+        ###
+        background-image: url(./images/react-icon-large.png);
+        background-repeat: no-repeat;
+        background-position: right 75%;
+        ###
+    
+    Like in this video: https://scrimba.com/learn/learnreact/add-background-logo-coa6145f3a9c7e1cbc40f5f6a
+
+    
