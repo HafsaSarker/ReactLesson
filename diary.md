@@ -67,4 +67,7 @@
     
     Like in this video: https://scrimba.com/learn/learnreact/add-background-logo-coa6145f3a9c7e1cbc40f5f6a
 
-    
+### when adding styles to one page, the styling from another page gets applied. To avoid this, import this way:
+
+   import styles from "./Interests.css?inline"
+
