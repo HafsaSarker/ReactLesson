@@ -1,0 +1,13 @@
+.footerCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #161619;
+    width: 317px;
+    height: 64px;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius: 25px;
+    font-size: 25px;
+}

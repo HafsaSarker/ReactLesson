@@ -7,4 +7,7 @@ body {
   background-color: #23252C;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #e2e2e2;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }

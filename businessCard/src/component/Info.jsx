@@ -11,7 +11,7 @@ export default function Info() {
             <p className='web'>laurasmith.website</p>
             <div className="buttonContainer">
                 <button><MdEmail /> Email</button>
-                <button><BsLinkedin /> LinkedIn</button>
+                <button className='linkedin'><BsLinkedin /> LinkedIn</button>
             </div>
         </div>
     )
