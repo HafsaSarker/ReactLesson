@@ -6,8 +6,12 @@
 }
 
 .card{
+    margin-left: 20px;
     width: 175px;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 .card--img{
     width: 100%;

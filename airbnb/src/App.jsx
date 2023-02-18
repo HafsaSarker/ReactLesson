@@ -9,7 +9,16 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <Card />
+      <Card 
+        obj = {{
+          img: "katie.png",
+          rating: 5.0,
+          reviewCount: 6,
+          country: "UK",
+          title: "Life Lessons with Katie Zaferes",
+          price: 136
+        }}
+      />
     </div>
   )
 }
