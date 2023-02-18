@@ -117,3 +117,17 @@
                 <h1>{brandName}<h1/>
             )
         }
+
+# Feb 18th recap
+
+### using data types other than strings on props
+    You can pass in any data types you want in props using {}. For ex, below we are passing in an object in our Joke component:
+
+        <Joke 
+            obj = {{
+                punchline: "I can't wait to see her face light up when she opens it.",
+                setup: "I got my daughter a fridge for her birthday"
+            }}
+        />
+
+    And then in our component file, we can access it how we would an object using dot notation.
