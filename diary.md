@@ -95,3 +95,25 @@
             <h1>{props.brandName}<h1/>
         )
     }
+
+### Destructuring props
+    In JS, you can unpack values from an object so you don't have to use dot notation to access them. Like this:
+
+        const person = {
+            name: "joe",
+            email: "jsmith@example.com"
+        }
+        //destructuring:
+        const {name, email} = person;
+        //access them
+        console.log(name); //joe
+
+    Similarly, you can destruct your props. Take the above example of props and use destructuring: 
+
+        export default function Nav(props){
+            console.log({ imgLink, brandName });
+            return (
+                <img src={imgLink} />
+                <h1>{brandName}<h1/>
+            )
+        }
