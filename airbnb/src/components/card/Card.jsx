@@ -1,10 +1,10 @@
 import './Card.css';
 import { AiFillStar } from 'react-icons/ai';
-import cardImg from '../../assets/katie.png'
+
 export default function Card(props) {
     return (
         <div className="card">
-            <img className="card--img" src={cardImg} />
+            <img src={props.obj.img}className="card--img"/>
             <div className="card-stats">
                 <span className='star-icon'><AiFillStar /></span>
                 <span className="gray">{props.obj.rating}</span>
