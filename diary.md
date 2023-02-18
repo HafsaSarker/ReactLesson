@@ -84,3 +84,14 @@
         )
     }
     ReactDOM.render(<App />, document.getElementById("root"));
+
+### React Props or Properties 
+    just as in functions we can pass parameters, in our custome components, we can pass in a value called props. We can console log this props and see that it is an object. So we can use and access it like we would an object. Ex:
+
+    export default function Nav(props){
+        console.log(props);
+        return (
+            <img src={props.imgLink} />
+            <h1>{props.brandName}<h1/>
+        )
+    }
