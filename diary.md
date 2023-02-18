@@ -70,4 +70,17 @@
 ### when adding styles to one page, the styling from another page gets applied. To avoid this, import this way:
 
    import styles from "./Interests.css?inline"
+# Feb 17 recap: 
 
+### JS inside JSX. How does JSX know if we're reffering to variables? {}
+    lets say we have:
+
+    function App(){
+        const firstName = "Joe"
+        const lastName = "Smith"
+
+        return (
+            <h1>Hello {firstName} {lastName}!<h1/>
+        )
+    }
+    ReactDOM.render(<App />, document.getElementById("root"));
