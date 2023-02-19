@@ -1,10 +1,24 @@
 import './App.css'
 import Joke from './Joke';
+import data from './jokesData';
 
 export default function App() {
+  const jokesMap = data.map((joke) => {
+    return 
+    <Joke 
+      setup = {joke.setup}
+      punchline = {joke.punchline}
+    />
+  });
   return (
-    <>
-      <Joke 
+    <div>
+      {jokesMap}
+    </div>
+  )
+}
+
+/*
+<Joke 
       obj = {{
         punchline: "I can't wait to see her face light up when she opens it.",
         setup: "I got my daughter a fridge for her birthday"
@@ -31,6 +45,4 @@ export default function App() {
         setup: "Why do bees stay in the hive in the winter?"
       }}
       />  
-    </>
-  )
-}
+*/
