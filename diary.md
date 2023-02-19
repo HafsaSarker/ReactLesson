@@ -131,3 +131,14 @@
         />
 
     And then in our component file, we can access it how we would an object using dot notation.
+
+### recall array.prototype.map() 
+    Let's say we have an array: \
+
+        const names = ["alice", "bob", "charlie", "danielle"]
+        
+    and we want to make the first letter of each string in the array capitalized. We can use .map like this:
+
+        const map2 = names.map((name) => {
+            return name[0].toUpperCase() + name.slice(1);
+        })
