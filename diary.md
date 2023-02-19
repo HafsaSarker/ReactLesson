@@ -142,3 +142,19 @@
         const map2 = names.map((name) => {
             return name[0].toUpperCase() + name.slice(1);
         })
+
+    --> When using .map to create react elements from our array of objects, we will see a warning. To fix it, we need to give a key. Almost all data comes with an id, which is unique for each element in the array. We can set key to that id (since it is unique). Like this:
+
+        const cards = data.map(item => {
+            return (
+                <Card
+                    key={item.id}
+                    img={item.coverImg}
+                    rating={item.stats.rating}
+                    reviewCount={item.stats.reviewCount}
+                    location={item.location}
+                    title={item.title}
+                    price={item.price}
+                />
+            )
+        })      
