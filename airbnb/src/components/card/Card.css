@@ -11,9 +11,11 @@
     font-size: 12px;
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
     gap: 6px;
+
 }
-.card--img{
+.card--image{
     width: 100%;
     border-radius: 9px;
 }
@@ -23,4 +25,13 @@
 }
 .star-icon {
     color:#FF5A5F;
+}
+.cards-list{
+    display: flex;
+}
+@media (max-width: 608px) {
+    .cards-list{
+        display: flex;
+        overflow: scroll;
+    }
 }
