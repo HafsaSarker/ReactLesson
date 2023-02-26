@@ -158,3 +158,8 @@
                 />
             )
         })      
+
+
+# Feb 26th Recap - State
+
+    ### In react, 'state' refers to values that are managed by the component, similar to variables declared inside a function. Any time we have changing values (like an adding an item to an array everytime we click a button) that needs to be saved/displayed, we will most likely use state.
