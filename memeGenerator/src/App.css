@@ -33,3 +33,11 @@ main > button {
   margin: 15px;
 
 }
+
+main > img {
+  width: 550px;
+  height: 550px;
+  object-fit: contain;
+  padding: 30px 30px;
+  background-color: lavender;
+}
