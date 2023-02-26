@@ -158,3 +158,35 @@
                 />
             )
         })      
+
+
+# Feb 26th Recap - State
+
+    ### In react, 'state' refers to values that are managed by the component, similar to variables declared inside a function. Any time we have changing values (like an adding an item to an array everytime we click a button) that needs to be saved/displayed, we will most likely use state.
+
+    ### Ex, the following code which we get in our App.jsx starter code
+
+        import React, { useState } from 'react';
+
+        function Example() {
+            // Declare a new state variable, which we'll call "count"
+            const [count, setCount] = useState(0);
+
+            function handleClick() {
+                setCount(count+1);
+            }
+            return (
+                <div>
+                <p>You clicked {count} times</p>
+                <button onClick={handleClick}>
+                    Click me
+                </button>
+                </div>
+            );
+        }
+    ###
+
+    ### NOTE: It is best practice to use a callback function to modify the value of count in the above code. Ex:
+        function handleClick(){
+            setCount(prevCount => prevCount + 1);
+        }

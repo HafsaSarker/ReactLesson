@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: lavender;
+  padding: 35px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > form {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+}
+
+main > form > input {
+  padding: 5px 10px;
+}
+
+main > button {
+  padding: 6px 20px;
+  margin: 15px;
+
+}
