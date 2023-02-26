@@ -185,3 +185,8 @@
             );
         }
     ###
+
+    ### NOTE: It is best practice to use a callback function to modify the value of count in the above code. Ex:
+        function handleClick(){
+            setCount(prevCount => prevCount + 1);
+        }
