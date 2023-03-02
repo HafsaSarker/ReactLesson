@@ -221,3 +221,29 @@
             console.log(result);
             // Expected output: 
             //["exuberant", "destruction", "present"]
+
+        
+    ### updating State Objects
+
+        [X] use spread operator to target a particular element of the object
+
+        Ex:
+        const [contact, setContact] = useState({
+            name: "John Doe",
+            id: "23402"
+            isEmployee: true
+        })
+
+        //we want to modify the isEmployee back and forth, onClick of a button
+
+        const toggle = () => {
+            setContact(prevState => {
+                return {
+                    ...prevState,
+                    isEmployee: !prevState.isEmployee
+                }
+            })
+        }
+
+
+
