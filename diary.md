@@ -190,3 +190,60 @@
         function handleClick(){
             setCount(prevCount => prevCount + 1);
         }
+
+
+
+# March 2nd Recap - Updating Arrays in State
+
+    ### Avoid:
+        adding, removing, replacing or sorting as they mutate the array directly
+
+    ### return a new array instead using:
+        concat, spread, filter, slice (not splice!), map, or copy arr first
+
+        [X] Spread operator(...) 
+            -> spreads an array into many arguments 
+
+        ex: 
+            let numbers = [1,2,3,4];
+            console.log(Math.max(...numbers)); 
+            //4
+
+        [X] Filtering 
+            -> filters out the item and return a new array that doesn't contain that item.
+        ex:     
+            const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+            const result = words.filter(word => {
+                return word.length > 6
+            });
+
+            console.log(result);
+            // Expected output: 
+            //["exuberant", "destruction", "present"]
+
+        
+    ### updating State Objects
+
+        [X] use spread operator to target a particular element of the object
+
+        Ex:
+        const [contact, setContact] = useState({
+            name: "John Doe",
+            id: "23402"
+            isEmployee: true
+        })
+
+        //we want to modify the isEmployee back and forth, onClick of a button
+
+        const toggle = () => {
+            setContact(prevState => {
+                return {
+                    ...prevState,
+                    isEmployee: !prevState.isEmployee
+                }
+            })
+        }
+
+
+
