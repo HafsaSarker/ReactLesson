@@ -1,32 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Boxes from './Boxes'
+import data from './boxData'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [boxArr, setBoxArr] = useState(data);
 
+  //loop through all box and render a div for each
+  const boxMap = boxArr.map(square => {
+    return <Boxes 
+              key = {square.id}
+              id = {square.id}
+              on = {square.on}
+          />
+  })
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {boxMap}
     </div>
   )
 }

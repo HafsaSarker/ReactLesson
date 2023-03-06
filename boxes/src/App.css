@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+.App {
+  display: flex;
+  gap: 15px;
+  width: 350px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  height: 80px;
+  width: 80px;
+  border: solid 3px rgb(184, 133, 68);
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
