@@ -247,3 +247,16 @@
 
 
 
+# March 4th Recap - Passing state setter functions in a component 
+
+    ### In react, you can't pass state between sibling omponents, so you either raise the state up to a parent component, or use third party state management with Redux.
+
+        ---> Passing data to components (a hierarchy)
+            vid link: https://scrimba.com/learn/learnreact/passing-data-around-coc1c4e8db27909ac7f804244
+
+    ### Just as in vanilla Js, you can dynamically style the pages, in React, you can also do it. Few differences:
+        ---> css in jsx 
+            vid link: https://scrimba.com/learn/learnreact/dynamic-styles-co57845e4a49eb86d4414b0fd
+            
+
+
