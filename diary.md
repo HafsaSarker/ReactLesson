@@ -258,5 +258,15 @@
         ---> css in jsx 
             vid link: https://scrimba.com/learn/learnreact/dynamic-styles-co57845e4a49eb86d4414b0fd
             
+# March 5th Recap - 
+    ### Looking at our box app, we can see that in our App, we have a state variable. That state var is being passed into our child component, Boxes, as a prop. In our boxes component, we can't directly change the state variable that lives in App.jsx. So what can we do? 
+        [X] Looking at 'Boxes.jsx' :
 
+            (Not recommended) Inside child component Boxes, create its own state variable and initialize it using the prop. So we can flip the value of on back and forth. 
+                ---> vid: https://scrimba.com/learn/learnreact/boxes-challenge-part-31-local-state-co0264ad6929a556e38a6a10f
 
+            ---> Prob with this: when we change the value of boxOn from true to false using the state variable in BOXES.JSX, we are NOT changing the states of boxOn in the state var in our APP.JSX. Meaning : there's two sources of truth.
+
+        [X] Looking at our 'BetterBoxes.jsx', we can create the toggle function in our APP.JSX and just pass it as a prob to <Boxes />. 
+
+            ---> vid: https://scrimba.com/learn/learnreact/boxes-challenge-part-5-cobdb4d3e907fa304af4b9958
