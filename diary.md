@@ -270,3 +270,14 @@
         [X] Looking at our 'BetterBoxes.jsx', we can create the toggle function in our APP.JSX and just pass it as a prob to <Boxes />. 
 
             ---> vid: https://scrimba.com/learn/learnreact/boxes-challenge-part-5-cobdb4d3e907fa304af4b9958
+
+
+# March 7th Recap 
+    ### Conditional Rendering 
+        Looking back at our Jokes App, let's say we only want to desplay the punchline if isShown (a state var) is true. We would do something like:
+            {isShown && <h1>{props.punchline}</h1>}
+
+        --> Only render the h1 element if isShown is true
+    ###
+
+    
