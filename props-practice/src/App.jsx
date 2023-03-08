@@ -3,13 +3,15 @@ import Joke from './Joke';
 import data from './jokesData';
 
 export default function App() {
-  const jokesMap = data.map((joke) => {
-    return 
-    <Joke 
-      setup = {joke.setup}
-      punchline = {joke.punchline}
-    />
-  });
+  const jokesMap = data.map(joke => {
+    return (
+      <Joke 
+        setup = {joke.setup}
+        punchline = {joke.punchline}
+        key = {joke.setup}
+      />
+    )
+  })
   return (
     <div>
       {jokesMap}
