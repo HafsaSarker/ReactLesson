@@ -279,5 +279,26 @@
 
         --> Only render the h1 element if isShown is true
     ###
-
     
+    ### Forms
+        [] Uncontrolled Components: 
+            -> data is handled by the DOM
+            -> data does not live in the component's state
+        [] Controlled Components: 
+            -> data lives in the component’s state
+            -> Overrides default HTML form behavior
+            --> ex:
+
+                function App(){
+                    const [email, setEmail] = useState('');
+                    return(
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} /> 
+                    )
+                }
+        
+            -> value: connects the state of the component with the value of the <input>
+            -> type: determines the method for rendering info
+            -> onChange: updates the component’s state as the user enters data
+            -> name: used when we have multiple controlled input elements. Lets the handler func choose what to do based on the value of *event.target.name*
+
+            
