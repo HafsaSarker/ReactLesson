@@ -299,6 +299,17 @@
             -> value: connects the state of the component with the value of the <input>
             -> type: determines the method for rendering info
             -> onChange: updates the component’s state as the user enters data
-            -> name: used when we have multiple controlled input elements. Lets the handler func choose what to do based on the value of *event.target.name*
+            -> name: used when we have multiple controlled input elements. Lets the handler func choose what to do based on the value of **event.target.name**
+                --> usually set to match the property name in the state we are saving it in
+    ###
+
+    ### Multiple Inputs
+        [] use <form> to group inputs together
+        [] add name (to distinguish between inputs) and value attributes
+        [] use an object to hold inputs in a state
+        [] update miltiple inputs with a single handleChange function
+
+        --> vid link: https://scrimba.com/learn/learnreact/forms-state-object-co4014fe8a23d6c6d376747ca
+    ###
 
             
