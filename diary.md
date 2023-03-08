@@ -312,4 +312,73 @@
         --> vid link: https://scrimba.com/learn/learnreact/forms-state-object-co4014fe8a23d6c6d376747ca
     ###
 
+    ### Types of Inputs 
+        [] checkbox :
+            -> has a checked attribute instead of value attribute, changed when user checks it or not.
+
+            Ex: 
+                <label>
+                    <input 
+                        type = "checkbox"
+                        checked={someBooleanVariable}
+                        name = 'aBooleanVarName'
+                    />
+                <label>
+
+        [] radio:
+            -> a mix of checkbox and text input. 
+            -> value attribute: we need to specify what value our state should take on if that radio button is selected.
+            -> checked attribute: we can turn it into a boolean by checking if checked = {obj.someData === "valueGivenToInput"}
+
+            -> vid link : https://scrimba.com/learn/learnreact/forms-in-react-radio-buttons-co14c423dbc2026a7a2b997a2
+            
+            Ex:
+                <label>
+                    <input 
+                        type="radio"
+                        name='employment'
+                        value='unemployed'
+                        checked={inputs.employment === "unemployed"}
+                        onChange={handleChange}
+                    />  
+                    Unemployed
+                </label>
+
+        [] Select :
+            -> takes value, name and a onChange function
+
+            Ex:
+            
+            <label>
+                What is your favorite color?
+                <select
+                    value={state.something}
+                    onChange={handleChange}
+                    name="something"
+                >
+                    <option value="">-- Choose --</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </label>
+    ###
+
+    ### Submitting a Form
+        [] Very first thing to do is, inside our handleSumbit function, do:
+            [] event.preventDefault() 
+                -> prevents the page from refreshing and setting all form values to default
+            [] then we would submit form data to an API or whatever we need to do
+        
+            Ex:
+                <form onSubmit={handleSubmit}>
+                    ...
+                    <button>Submit</button>
+                </form>
+              
+            [] note: the button type is automatically set to submit when it is inside the <form> 
+
+
+
+
+
             
