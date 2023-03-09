@@ -9,6 +9,7 @@ function App() {
     joinNewsletter: false
   })
   const [isSumbited, setIsSubmited] = useState(false);
+  const [passMatch, setPassMatch] = useState(false);
 
   const handleChange = (event) => {
     //destructure event.target and pull out values we need
@@ -24,11 +25,16 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setIsSubmited(true);
 
     //check if passwords are same
-    if(formInputs.password !== formInputs.confirmPass) {
-        console.log("Passwords do not match")
+    if(formInputs.password === formInputs.confirmPass) {
+        setPassMatch(true);
+        setIsSubmited(true);
+    }
+    else {
+        alert("Passwords do not match")
+        setIsSubmited(false);
+        setPassMatch(false);
     }
 
     console.log(formInputs);
@@ -46,14 +52,14 @@ function App() {
             onChange={handleChange}
         />
         <input 
-            type="text"
+            type="password"
             placeholder='password'
             value={formInputs.password}
             name='password'
             onChange={handleChange}
         />
         <input 
-            type="text"
+            type="password"
             placeholder='Confirm password'
             value={formInputs.confirmPass}
             name='confirmPass'
@@ -72,7 +78,9 @@ function App() {
         </div>
         <button>Sign Up</button>
       </form>
-      {isSumbited && (formInputs.joinNewsletter && <p>Thanks for signing up for our newsletter!</p>)}
+      {passMatch && isSumbited && (formInputs.joinNewsletter && <p>Thanks for signing up for our newsletter!</p>)}
+
+      {passMatch && isSumbited && (!formInputs.joinNewsletter && <p>Successfully signed up!</p>)}
       
     </div>
   )
