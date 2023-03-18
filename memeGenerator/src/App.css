@@ -28,10 +28,43 @@ main > form > input {
   padding: 5px 10px;
 }
 
-main > button {
+button {
   padding: 6px 20px;
   margin: 15px;
+  border: solid 1px saddlebrown;
+}
 
+.meme {
+  position: relative;
+}
+.text-bottom,
+.text-top{
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+.text-bottom{
+  top: 80%;
 }
 
 main > img {

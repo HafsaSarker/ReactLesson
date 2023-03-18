@@ -377,8 +377,25 @@
               
             [] note: the button type is automatically set to submit when it is inside the <form> 
 
+# March 7th recap - Handling side effects
+
+    - React can't handle side effects, or, anything it isn't charge of. Ex, local storage, API/database interactions, web sockets....
 
 
+    - the effect hook: useEffect()
+        -lets us perform sode effects in function components 
+        - takes 2 required param
+            - a callback function()
+            - a dependency array[] that determines whether it should re-run the effect function, instead of running after every single render
 
+        Ex: we run this useEffect every time count is updated:
 
+            const [count, setCount] = useState(0);
             
+            useEffect(() => {
+                console.log("Effect ran")
+            }, [count])
+
+        - NOTES 
+            - if we leave the dependency array as just [], our effect will run only once (when the component loads)
+            - React will NOT run the effect when the values of the dependencies in the array stays the same between renders
