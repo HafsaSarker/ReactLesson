@@ -399,3 +399,23 @@
         - NOTES 
             - if we leave the dependency array as just [], our effect will run only once (when the component loads)
             - React will NOT run the effect when the values of the dependencies in the array stays the same between renders
+
+        - useEffect cleanup:
+            - vid link : https://scrimba.com/learn/learnreact/useeffect-cleanup-function-coa6a4c9985b4339f164fe0ab
+
+            -we must handle any side effects we have from using useEffect, if there's any
+                Ex: 
+
+                useEffect(() => {
+                    function dummy() {
+                        ...
+                    }
+
+                    window.addEventListener(...);
+
+                    //cleanup
+                    return function() {
+                        window.removeEventListener(...)
+                    }
+
+                }, [])
