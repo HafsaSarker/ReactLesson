@@ -9,13 +9,21 @@ export default function Meme() {
         bottomText: "",
         randomImg : dummyImgUrl
     });
+
+    //state var to hold API data
     const [allMemeImages, setAllMemeImages] = useState([]);
 
     useEffect(() => {
-        console.log("R")
-        fetch("https://api.imgflip.com/get_memes")
-            .then((response) => response.json())
-            .then((data) => setAllMemeImages(data.data.memes))
+        console.log("Ran")
+        async function getMemes() {
+            const response = await fetch("https://api.imgflip.com/get_memes");
+
+            const data = await response.json(); 
+            
+            setAllMemeImages(data.data.memes);
+        }
+        
+        getMemes();
     }, []);
 
     function handleChange(event) {
@@ -29,7 +37,7 @@ export default function Meme() {
     
     function getRandomImg(event){
         event.preventDefault();
-        console.log(allMemeImages)
+        
         //get random img url
         let rand = Math.floor(Math.random() * (allMemeImages.length));
         const url = allMemeImages[rand].url;
